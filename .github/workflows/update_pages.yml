@@ -1,0 +1,17 @@
+name: Update Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_test_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: build-storybook
