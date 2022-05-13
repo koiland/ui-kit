@@ -25,4 +25,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: npm build-storybook
+        run: npm run build-storybook # run the "build-storybook" package script
