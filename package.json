@@ -24,7 +24,7 @@
   "browserslist": [
     "> 0.25%, not dead"
   ],
-  "homepage": "",
+  "homepage": "https://koiland.github.io/koi-ui-kit/",
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@storybook/addon-actions": "^6.4.22",
