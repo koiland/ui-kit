@@ -1,4 +1,4 @@
-name: Storybook
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
           npm run build-storybook
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
           folder: storybookout # output folder from `npm run build-storybook`
