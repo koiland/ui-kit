@@ -61,7 +61,6 @@ module.exports = {
     'react/require-default-props': 0,
     'react/jsx-props-no-spreading': 0,
     'arrow-parens': 1,
-
     /* WARN: TS doesn't understand dynamic type as prop */
     'react/button-has-type': 0,
     'quotes': ['error', 'single', {
@@ -76,7 +75,7 @@ module.exports = {
     'prettier/prettier': ['error', {
       trailingComma: 'es5',
       tabWidth: 2,
-      printWidth: 140,
+      printWidth: 120,
       semi: true,
       useTabs: false,
       singleQuote: true,

@@ -1,16 +1,16 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, Story } from '@storybook/react';
 
-const GhostButton = () => <div>54321</div>;
+import { PrimaryButton } from './PrimaryButton';
 
 export default {
-  title: 'Atoms/Button/GhostButton',
-  component: GhostButton,
+  title: 'Atoms/Button/PrimaryButton',
+  component: PrimaryButton,
   parameters: {},
-  args: {},
-  argTypes: {},
-} as ComponentMeta<typeof GhostButton>;
+  args: {
+    children: 'Button',
+  },
+  // argTypes: {},
+} as ComponentMeta<typeof PrimaryButton>;
 
-const Template: ComponentStory<typeof GhostButton> = (args: {}) => <GhostButton {...args} />;
-
-export const Default = Template.bind({});
+export const Default: Story = ({ children, ...args }) => <PrimaryButton {...args}>{children}</PrimaryButton>;

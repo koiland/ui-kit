@@ -1,0 +1,14 @@
+:root {
+  /* Blue */
+  --blue-100: #0B71D9;
+  --blue-200: #0A64BF;
+  --blue-300: #0959AB;
+
+  /* Gray */
+  --gray-100: #B8BFC6;
+  --gray-200: #B8BFC6;
+  --gray-300: rgba(208, 214, 221, 0.5);
+  --gray-400: #393F47;
+
+  --white: #FFFFFF;
+}

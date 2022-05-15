@@ -1,16 +1,17 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, Story } from '@storybook/react';
 
-const BaseButton = () => <div>12345</div>;
+/* @Components */
+import { BaseButton } from './BaseButton';
 
 export default {
   title: 'Atoms/Button/BaseButton',
   component: BaseButton,
   parameters: {},
-  args: {},
-  argTypes: {},
+  args: {
+    children: 'Button',
+  },
+  // argTypes: {},
 } as ComponentMeta<typeof BaseButton>;
 
-const Template: ComponentStory<typeof BaseButton> = (args: {}) => <BaseButton {...args} />;
-
-export const Default = Template.bind({});
+export const Default: Story = (args) => <BaseButton {...args}>{args.children}</BaseButton>;
