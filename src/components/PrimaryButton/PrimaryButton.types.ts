@@ -4,23 +4,12 @@ export type TPrimaryButtonAppearance = 'blue';
 export type TPrimaryButtonSize = 'sm' | 'md' | 'lg';
 
 export type TSizeMap = {
-  sm: {
+  [key in TPrimaryButtonSize]: {
     minWidth: string;
     minHeight: string;
     padding: string;
     borderRadius: string;
-  };
-  md: {
-    minWidth: string;
-    minHeight: string;
-    padding: string;
-    borderRadius: string;
-  };
-  lg: {
-    minWidth: string;
-    minHeight: string;
-    padding: string;
-    borderRadius: string;
+    font: string;
   };
 };
 

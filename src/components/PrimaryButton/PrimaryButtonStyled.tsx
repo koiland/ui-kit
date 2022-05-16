@@ -15,18 +15,21 @@ export const PRIMARY_BUTTON_SIZE_MAP: TSizeMap = {
     minHeight: '40px',
     padding: '6px 12px',
     borderRadius: '4px',
+    font: 'var(--font-16-bold)',
   },
   md: {
     minWidth: '48px',
     minHeight: '48px',
     padding: ' 6px 16px',
     borderRadius: '4px',
+    font: 'var(--font-18-bold)',
   },
   lg: {
     minWidth: '64px',
     minHeight: '64px',
     padding: '6px 24px',
     borderRadius: '4px',
+    font: 'var(--font-20-bold)',
   },
 };
 
@@ -48,7 +51,6 @@ export const RenderTrailingStyled = styled.span<TPrimaryButtonProps>({
 
 export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ size, appearance, children }) => ({
   color: 'var(--white)',
-  font: 'var(--font-16-bold)',
   border: '1px solid transparent',
   backgroundColor: `var(--${appearance}-100)`,
   transition: `color var(--transition-default),
