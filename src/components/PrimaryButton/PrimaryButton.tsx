@@ -1,9 +1,10 @@
 import React from 'react';
 
+/* @Types */
 import { TPrimaryButtonProps } from './PrimaryButton.types';
 
 /* @Styled Components */
-import { RenderLeadingStyled, RenderTrailingStyled, PrimaryButtonStyled } from './PrimaryButtonStyled';
+import { RenderLeadingStyled, RenderTrailingStyled, PrimaryButtonStyled } from './PrimaryButton.styled';
 
 export const DEFAULT_PRIMARY_BUTTON_SIZE = 'md';
 export const DEFAULT_PRIMARY_BUTTON_APPEARANCE = 'blue';
