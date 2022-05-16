@@ -1,7 +1,9 @@
 import React from 'react';
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { PrimaryButton } from './PrimaryButton';
+/* @Components */
+import { Spinner } from 'components/Spinner';
+import { PrimaryButton } from 'components/PrimaryButton';
 
 export default {
   title: 'Atoms/Button/PrimaryButton',
@@ -14,3 +16,9 @@ export default {
 } as ComponentMeta<typeof PrimaryButton>;
 
 export const Default: Story = ({ children, ...args }) => <PrimaryButton {...args}>{children}</PrimaryButton>;
+
+export const Loading: Story = ({ children, ...args }) => (
+  <PrimaryButton {...args} loading renderLeading={<Spinner />}>
+    {children}
+  </PrimaryButton>
+);

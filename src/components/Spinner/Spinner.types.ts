@@ -1,4 +1,4 @@
-export type TSpinnerAppearance = 'blue';
+export type TSpinnerAppearance = 'blue' | 'green';
 export type TSpinnerSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export type TSpinnerProps = {
