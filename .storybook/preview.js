@@ -1,3 +1,5 @@
+import { themes } from '@storybook/theming';
+
 import './root.css';
 
 export const parameters = {
@@ -9,4 +11,7 @@ export const parameters = {
     },
   },
   layout: 'centered',
+  docs: {
+    theme: themes.dark,
+  },
 }
