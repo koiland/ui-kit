@@ -1,7 +1,7 @@
 {
-  "name": "koi-ui-kit",
+  "name": "@koiland/ui-kit",
   "version": "1.0.0",
-  "description": "",
+  "description": "React ",
   "main": "dist/node/index.js",
   "module": "dist/index.js",
   "files": [
@@ -13,14 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://github.com/koiland/ui-kit.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "react",
+    "ui-kit",
+    "components"
+  ],
+  "author": "dev@koiland.io",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/koiland/ui-kit/issues"
   },
+  "sideEffects": false,
   "browserslist": [
     "> 0.25%, not dead"
   ],
@@ -33,6 +41,10 @@
     "@storybook/addon-links": "^6.4.22",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "0.0.11",
+    "@types/react": "^17.0.37",
+    "@types/styled-components": "^5.1.19",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "babel-loader": "^8.2.5",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -43,6 +55,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-storybook": "^0.5.5",
     "husky": "^7.0.4",
     "prettier": "^2.2.1",
     "react": "^18.0.0",
@@ -50,15 +63,14 @@
     "styled-components": "^5.3.5",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^4.5.4",
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
-    "@types/react": "^17.0.37",
-    "@types/styled-components": "^5.1.19"
+    "typescript": "^4.5.4"
   },
   "peerDependencies": {
     "react": ">= 18.0",
     "react-dom": ">= 18.0",
     "styled-components": ">= 5.3.5"
+  },
+  "dependencies": {
+    "@koiland/icons": "^1.6.0"
   }
 }

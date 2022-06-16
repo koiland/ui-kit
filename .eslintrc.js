@@ -5,7 +5,7 @@ module.exports = {
     browser: true
   },
   plugins: ['react', 'prettier', 'react-hooks', '@typescript-eslint'],
-  extends: ["airbnb", "prettier", "prettier/react", "airbnb-typescript", "prettier/@typescript-eslint"],
+  extends: ["airbnb", "prettier", "prettier/react", "airbnb-typescript", "prettier/@typescript-eslint", "plugin:storybook/recommended"],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
@@ -61,6 +61,7 @@ module.exports = {
     'react/require-default-props': 0,
     'react/jsx-props-no-spreading': 0,
     'arrow-parens': 1,
+
     /* WARN: TS doesn't understand dynamic type as prop */
     'react/button-has-type': 0,
     'quotes': ['error', 'single', {
