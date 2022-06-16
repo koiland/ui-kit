@@ -1,15 +1,15 @@
 {
   "name": "@koiland/ui-kit",
   "version": "1.0.0",
-  "description": "React ",
-  "main": "dist/node/index.js",
-  "module": "dist/index.js",
-  "files": [
-    "dist"
+  "description": "React UI-KIT components",
+  "keywords": [
+    "react",
+    "ui-kit",
+    "components"
   ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o .storybookout"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "keywords": [
-    "react",
-    "ui-kit",
-    "components"
-  ],
   "author": "dev@koiland.io",
   "license": "UNLICENSED",
   "bugs": {
