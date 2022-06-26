@@ -4,6 +4,16 @@
   --blue-200: #0A64BF;
   --blue-300: #0959AB;
 
+  /* Green */
+  --green-100: #2DA44E;
+  --green-200: #2C974B;
+  --green-300: #298E46;
+
+  /* Red */
+  --red-100: #DB4C3F;
+  --red-200: #B03D32;
+  --red-300: #B03D32;
+
   /* Gray */
   --gray-100: #B8BFC6;
   --gray-200: #B8BFC6;
@@ -11,4 +21,5 @@
   --gray-400: #393F47;
 
   --white: #FFFFFF;
+  --black: #000000;
 }

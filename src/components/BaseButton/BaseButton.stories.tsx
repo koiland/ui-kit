@@ -5,13 +5,12 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { BaseButton } from './BaseButton';
 
 export default {
-  title: 'Atoms/Button/BaseButton',
+  title: 'Atoms/Buttons/BaseButton',
   component: BaseButton,
   parameters: {},
   args: {
     children: 'Button',
   },
-  // argTypes: {},
 } as ComponentMeta<typeof BaseButton>;
 
 export const Default: Story = (args) => <BaseButton {...args}>{args.children}</BaseButton>;

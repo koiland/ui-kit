@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 /* @Types */
-import { TPrimaryButtonProps, TSizeMap } from './PrimaryButton.types';
+import { TOutlineButtonProps, TSizeMap } from './OutlineButton.types';
 
 /* @Components */
 import { BaseButton } from '../BaseButton';
+
+/* @Helpers */
+import { hexToRgb } from 'helpers/hexToRgba';
 
 export const PRIMARY_BUTTON_SIZE_MAP: TSizeMap = {
   sm: {
@@ -15,7 +18,7 @@ export const PRIMARY_BUTTON_SIZE_MAP: TSizeMap = {
   },
 };
 
-export const RenderLeadingStyled = styled.span<TPrimaryButtonProps & { hasMargin: boolean }>(({ hasMargin }) => ({
+export const RenderLeadingStyled = styled.span<TOutlineButtonProps & { hasMargin: boolean }>(({ hasMargin }) => ({
   display: 'flex',
   flexShrink: 0,
   alignItems: 'center',
@@ -23,7 +26,7 @@ export const RenderLeadingStyled = styled.span<TPrimaryButtonProps & { hasMargin
   ...(hasMargin && { marginRight: '8px' }),
 }));
 
-export const RenderTrailingStyled = styled.span<TPrimaryButtonProps>({
+export const RenderTrailingStyled = styled.span<TOutlineButtonProps>({
   display: 'flex',
   flexShrink: 0,
   alignItems: 'center',
@@ -31,14 +34,15 @@ export const RenderTrailingStyled = styled.span<TPrimaryButtonProps>({
   marginLeft: '8px',
 });
 
-export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ size, appearance, children }) => ({
-  color: 'var(--white)',
+export const OutlineButtonStyled = styled(BaseButton)<TOutlineButtonProps>(({ size, appearance, children }) => ({
+  color: `var(--${appearance}-100)`,
   border: '1px solid transparent',
   fontSize: '14px',
   fontFamily: 'inherit',
   lineHeight: 'var(--line-height-20)',
   fontWeight: 'var(--font-weight-semi-bold)',
-  backgroundColor: `var(--${appearance}-100)`,
+  backgroundColor: 'transparent',
+  borderColor: `var(--${appearance}-100)`,
   transition: `color var(--transition-default),
                border-color var(--transition-default),
                background-color var(--transition-default)`,
@@ -51,14 +55,19 @@ export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ si
   },
 
   '&:hover:not(:focus):enabled': {
+    color: 'var(--white)',
+    borderColor: `var(--${appearance}-200)`,
     backgroundColor: `var(--${appearance}-200)`,
   },
 
   '&:active': {
+    color: 'var(--white)',
+    borderColor: `var(--${appearance}-300)`,
     backgroundColor: `var(--${appearance}-300)`,
   },
 
   '&:focus:not(:active):enabled': {
+    color: 'var(--white)',
     borderColor: `var(--${appearance}-300)`,
     backgroundColor: `var(--${appearance}-100)`,
     boxShadow: `0 0 0 3px rgb(var(--${appearance}-100), 0.3)`,
@@ -66,6 +75,7 @@ export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ si
 
   '&:disabled': {
     color: 'var(--white)',
+    borderColor: 'var(--gray-100)',
     backgroundColor: 'var(--gray-100)',
 
     '& svg': {

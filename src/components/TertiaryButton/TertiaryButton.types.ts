@@ -1,10 +1,10 @@
 import { TBaseButtonProps } from '../BaseButton';
 
-export type TPrimaryButtonSize = 'sm';
-export type TPrimaryButtonAppearance = 'blue' | 'green' | 'red';
+export type TTertiaryButtonSize = 'sm';
+export type TTertiaryButtonAppearance = 'blue' | 'green' | 'red';
 
 export type TSizeMap = {
-  [key in TPrimaryButtonSize]: {
+  [key in TTertiaryButtonSize]: {
     minWidth: string;
     minHeight: string;
     padding: string;
@@ -12,13 +12,13 @@ export type TSizeMap = {
   };
 };
 
-export type TPrimaryButtonProps = TBaseButtonProps & {
+export type TTertiaryButtonProps = TBaseButtonProps & {
   /** Invoke loading state */
   loading?: boolean;
   /**
    * **sm:** — w&h: **32px**;
    */
-  size?: TPrimaryButtonSize;
+  size?: TTertiaryButtonSize;
   /**
    * **blue:** — **#0B71D9;**
    *
@@ -27,5 +27,5 @@ export type TPrimaryButtonProps = TBaseButtonProps & {
    * **red:** — **#DB4C3F;**
    *
    */
-  appearance?: TPrimaryButtonAppearance;
+  appearance?: TTertiaryButtonAppearance;
 };

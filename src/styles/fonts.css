@@ -1,6 +1,7 @@
 :root {
   /* Font Families */
-  --font-family-default: 'Roboto', Helvetica, Arial, sans-serif;
+  /*--font-family-default: 'Roboto', Helvetica, Arial, sans-serif;*/
+  --font-family-default: inherit;
 
   /* Font Families Shortcut */
   --ff-def: var(--font-family-default);
@@ -34,11 +35,15 @@
   /* Font Weight */
   --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-bold: 500;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
 
   /* Font Weight Shortcuts */
   --fw-l: var(--font-weight-light);
   --fw-r: var(--font-weight-regular);
+  --fw-m: var(--font-weight-medium);
+  --fw-sm-b: var(--font-weight-semi-bold);
   --fw-b: var(--font-weight-bold);
 
   /* Font Mixins */
@@ -53,6 +58,18 @@
   --font-16-regular: var(--fw-r) var(--fs-16)/var(--lh-24) var(--ff-def);
   --font-18-regular: var(--fw-r) var(--fs-18)/var(--lh-28) var(--ff-def);
   --font-20-regular: var(--fw-r) var(--fs-20)/var(--lh-28) var(--ff-def);
+
+  --font-12-medium: var(--fw-m) var(--fs-12)/var(--lh-16) var(--ff-def);
+  --font-14-medium: var(--fw-m) var(--fs-14)/var(--lh-20) var(--ff-def);
+  --font-16-medium: var(--fw-m) var(--fs-16)/var(--lh-24) var(--ff-def);
+  --font-18-medium: var(--fw-m) var(--fs-18)/var(--lh-28) var(--ff-def);
+  --font-20-medium: var(--fw-m) var(--fs-20)/var(--lh-28) var(--ff-def);
+
+  --font-12-semi-bold: var(--fw-sm-b) var(--fs-12)/var(--lh-16) var(--ff-def);
+  --font-14-semi-bold: var(--fw-sm-b) var(--fs-14)/var(--lh-20) var(--ff-def);
+  --font-16-semi-bold: var(--fw-sm-b) var(--fs-16)/var(--lh-24) var(--ff-def);
+  --font-18-semi-bold: var(--fw-sm-b) var(--fs-18)/var(--lh-28) var(--ff-def);
+  --font-20-semi-bold: var(--fw-sm-b) var(--fs-20)/var(--lh-28) var(--ff-def);
 
   --font-12-bold: var(--fw-b) var(--fs-12)/var(--lh-16) var(--ff-def);
   --font-14-bold: var(--fw-b) var(--fs-14)/var(--lh-20) var(--ff-def);

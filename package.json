@@ -66,6 +66,6 @@
     "styled-components": ">= 5.3.5"
   },
   "dependencies": {
-    "@koiland/icons": "^1.6.0"
+    "@koiland/icons": "^1.7.0"
   }
 }

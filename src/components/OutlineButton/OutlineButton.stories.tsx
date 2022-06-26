@@ -5,15 +5,15 @@ import { Filters } from '@koiland/icons';
 /* @Components */
 import { Icon } from 'components/Icon';
 import { Spinner } from 'components/Spinner';
-import { PrimaryButton, TPrimaryButtonAppearance } from 'components/PrimaryButton';
+import { OutlineButton, TOutlineButtonAppearance } from 'components/OutlineButton';
 
 export default {
-  title: 'Atoms/Buttons/PrimaryButton',
-  component: PrimaryButton,
+  title: 'Atoms/Buttons/OutlineButton',
+  component: OutlineButton,
   parameters: {
     docs: {
       description: {
-        component: 'Primary Button component',
+        component: 'Outline Button component',
       },
     },
   },
@@ -29,45 +29,45 @@ export default {
     renderLeading: { control: 'null' },
     renderTrailing: { control: 'null' },
   },
-} as ComponentMeta<typeof PrimaryButton>;
+} as ComponentMeta<typeof OutlineButton>;
 
-export const Default: Story = ({ ...args }): JSX.Element => <PrimaryButton {...args}>Primary Button</PrimaryButton>;
+export const Default: Story = ({ ...args }): JSX.Element => <OutlineButton {...args}>Outline Button</OutlineButton>;
 
 export const WithIcon: Story = ({ ...args }): JSX.Element => (
-  <PrimaryButton {...args} renderLeading={<Icon glyph={Filters} size="sm" />}>
-    Primary Button
-  </PrimaryButton>
+  <OutlineButton {...args} renderLeading={<Icon glyph={Filters} size="sm" />}>
+    Outline Button
+  </OutlineButton>
 );
 
 export const WithIconOnly: Story = ({ ...args }): JSX.Element => (
-  <PrimaryButton {...args} renderLeading={<Icon glyph={Filters} size="sm" />} />
+  <OutlineButton {...args} renderLeading={<Icon glyph={Filters} size="sm" />} />
 );
 
 export const Appearances: Story = ({ children, ...args }): JSX.Element => (
   <div style={{ display: 'flex', alignItems: 'center' }}>
     <div style={{ margin: '0 4px' }}>
-      {['blue', 'green', 'red'].map((appearance: TPrimaryButtonAppearance) => (
-        <PrimaryButton key={appearance} {...args} appearance={appearance} style={{ marginTop: '8px' }}>
-          Primary Button
-        </PrimaryButton>
+      {['blue', 'green', 'red'].map((appearance: TOutlineButtonAppearance) => (
+        <OutlineButton key={appearance} {...args} appearance={appearance} style={{ marginTop: '8px' }}>
+          Outline Button
+        </OutlineButton>
       ))}
     </div>
     <div style={{ margin: '0 4px' }}>
-      {['blue', 'green', 'red'].map((appearance: TPrimaryButtonAppearance) => (
-        <PrimaryButton
+      {['blue', 'green', 'red'].map((appearance: TOutlineButtonAppearance) => (
+        <OutlineButton
           {...args}
           key={appearance}
           appearance={appearance}
           renderLeading={<Icon size="sm" glyph={Filters} />}
           style={{ marginTop: '8px' }}
         >
-          Primary Button
-        </PrimaryButton>
+          Outline Button
+        </OutlineButton>
       ))}
     </div>
     <div style={{ margin: '0 4px' }}>
-      {['blue', 'green', 'red'].map((appearance: TPrimaryButtonAppearance) => (
-        <PrimaryButton
+      {['blue', 'green', 'red'].map((appearance: TOutlineButtonAppearance) => (
+        <OutlineButton
           {...args}
           key={appearance}
           appearance={appearance}
@@ -80,13 +80,13 @@ export const Appearances: Story = ({ children, ...args }): JSX.Element => (
 );
 
 export const Disabled: Story = ({ children, ...args }): JSX.Element => (
-  <PrimaryButton {...args} disabled>
-    Primary Button
-  </PrimaryButton>
+  <OutlineButton {...args} disabled>
+    Outline Button
+  </OutlineButton>
 );
 
 export const Loading: Story = ({ children, ...args }): JSX.Element => (
-  <PrimaryButton {...args} loading renderLeading={<Spinner size="xs" />}>
-    Primary Button
-  </PrimaryButton>
+  <OutlineButton {...args} loading renderLeading={<Spinner size="xs" />}>
+    Outline Button
+  </OutlineButton>
 );

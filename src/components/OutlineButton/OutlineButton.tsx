@@ -1,12 +1,12 @@
 import React from 'react';
 
 /* @Types */
-import { TPrimaryButtonProps } from './PrimaryButton.types';
+import { TPrimaryButtonProps } from './OutlineButton.types';
 
 /* @Styled Components */
-import { RenderLeadingStyled, RenderTrailingStyled, PrimaryButtonStyled } from './PrimaryButton.styled';
+import { RenderLeadingStyled, RenderTrailingStyled, OutlineButtonStyled } from './OutlineButton.styled';
 
-export const PrimaryButton = ({
+export const OutlineButton = ({
   size = 'sm',
   appearance = 'blue',
   loading = false,
@@ -16,7 +16,7 @@ export const PrimaryButton = ({
   renderTrailing,
   ...props
 }: TPrimaryButtonProps): JSX.Element => (
-  <PrimaryButtonStyled
+  <OutlineButtonStyled
     size={size}
     appearance={appearance}
     disabled={loading || disabled}
@@ -27,5 +27,5 @@ export const PrimaryButton = ({
     {...props}
   >
     {children}
-  </PrimaryButtonStyled>
+  </OutlineButtonStyled>
 );

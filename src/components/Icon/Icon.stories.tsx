@@ -9,7 +9,7 @@ import * as ICONS from '@koiland/icons';
 import { Icon } from './Icon';
 
 export default {
-  title: 'Icon',
+  title: 'Atoms/Icon/Icon',
   component: Icon,
   parameters: {
     layout: 'default',
@@ -66,30 +66,3 @@ export const Icons = ({ ...args }): JSX.Element => (
     ))}
   </div>
 );
-
-const CODE_SAMPLE = `
-/* install */
-| npm install @koiland/icons@version
-
-/** package.json */
-"dependencies": {
-  "@koiland/icons": "^version"
-}
-/* package.json */
-
-/* import */
-import { YOUR_ICON } from '@koiland/icons';
-
-/* usage */
-const SomeComponent = () => <YourIcon />;
-`;
-
-Icons.parameters = {
-  docs: {
-    source: {
-      code: `${CODE_SAMPLE}`,
-      language: 'jsx',
-      type: 'auto',
-    },
-  },
-};

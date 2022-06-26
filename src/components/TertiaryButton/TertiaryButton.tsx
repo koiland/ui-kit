@@ -1,12 +1,12 @@
 import React from 'react';
 
 /* @Types */
-import { TPrimaryButtonProps } from './PrimaryButton.types';
+import { TTertiaryButtonProps } from './TertiaryButton.types';
 
 /* @Styled Components */
-import { RenderLeadingStyled, RenderTrailingStyled, PrimaryButtonStyled } from './PrimaryButton.styled';
+import { RenderLeadingStyled, RenderTrailingStyled, TertiaryButtonStyled } from './TertiaryButton.styled';
 
-export const PrimaryButton = ({
+export const TertiaryButton = ({
   size = 'sm',
   appearance = 'blue',
   loading = false,
@@ -15,8 +15,8 @@ export const PrimaryButton = ({
   renderLeading,
   renderTrailing,
   ...props
-}: TPrimaryButtonProps): JSX.Element => (
-  <PrimaryButtonStyled
+}: TTertiaryButtonProps): JSX.Element => (
+  <TertiaryButtonStyled
     size={size}
     appearance={appearance}
     disabled={loading || disabled}
@@ -27,5 +27,5 @@ export const PrimaryButton = ({
     {...props}
   >
     {children}
-  </PrimaryButtonStyled>
+  </TertiaryButtonStyled>
 );

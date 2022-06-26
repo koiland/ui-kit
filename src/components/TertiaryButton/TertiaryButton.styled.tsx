@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 /* @Types */
-import { TPrimaryButtonProps, TSizeMap } from './PrimaryButton.types';
+import { TTertiaryButtonProps, TSizeMap } from './TertiaryButton.types';
 
 /* @Components */
 import { BaseButton } from '../BaseButton';
 
-export const PRIMARY_BUTTON_SIZE_MAP: TSizeMap = {
+export const TERTIARY_BUTTON_SIZE_MAP: TSizeMap = {
   sm: {
     minWidth: '32px',
     minHeight: '32px',
@@ -15,7 +15,7 @@ export const PRIMARY_BUTTON_SIZE_MAP: TSizeMap = {
   },
 };
 
-export const RenderLeadingStyled = styled.span<TPrimaryButtonProps & { hasMargin: boolean }>(({ hasMargin }) => ({
+export const RenderLeadingStyled = styled.span<TTertiaryButtonProps & { hasMargin: boolean }>(({ hasMargin }) => ({
   display: 'flex',
   flexShrink: 0,
   alignItems: 'center',
@@ -23,7 +23,7 @@ export const RenderLeadingStyled = styled.span<TPrimaryButtonProps & { hasMargin
   ...(hasMargin && { marginRight: '8px' }),
 }));
 
-export const RenderTrailingStyled = styled.span<TPrimaryButtonProps>({
+export const RenderTrailingStyled = styled.span<TTertiaryButtonProps>({
   display: 'flex',
   flexShrink: 0,
   alignItems: 'center',
@@ -31,19 +31,19 @@ export const RenderTrailingStyled = styled.span<TPrimaryButtonProps>({
   marginLeft: '8px',
 });
 
-export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ size, appearance, children }) => ({
-  color: 'var(--white)',
+export const TertiaryButtonStyled = styled(BaseButton)<TTertiaryButtonProps>(({ size, appearance, children }) => ({
+  color: `var(--${appearance}-100)`,
   border: '1px solid transparent',
   fontSize: '14px',
   fontFamily: 'inherit',
   lineHeight: 'var(--line-height-20)',
   fontWeight: 'var(--font-weight-semi-bold)',
-  backgroundColor: `var(--${appearance}-100)`,
+  backgroundColor: 'transparent',
   transition: `color var(--transition-default),
                border-color var(--transition-default),
                background-color var(--transition-default)`,
 
-  ...PRIMARY_BUTTON_SIZE_MAP[size],
+  ...TERTIARY_BUTTON_SIZE_MAP[size],
   ...(!children && { padding: 0 }),
 
   '& svg': {
@@ -51,17 +51,15 @@ export const PrimaryButtonStyled = styled(BaseButton)<TPrimaryButtonProps>(({ si
   },
 
   '&:hover:not(:focus):enabled': {
-    backgroundColor: `var(--${appearance}-200)`,
+    color: `var(--${appearance}-200)`,
   },
 
   '&:active': {
-    backgroundColor: `var(--${appearance}-300)`,
+    color: `var(--${appearance}-300)`,
   },
 
   '&:focus:not(:active):enabled': {
-    borderColor: `var(--${appearance}-300)`,
-    backgroundColor: `var(--${appearance}-100)`,
-    boxShadow: `0 0 0 3px rgb(var(--${appearance}-100), 0.3)`,
+    color: `var(--${appearance}-100)`,
   },
 
   '&:disabled': {
